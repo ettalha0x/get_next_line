@@ -6,7 +6,7 @@
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:18:06 by nettalha          #+#    #+#             */
-/*   Updated: 2022/10/29 11:46:57 by nettalha         ###   ########.fr       */
+/*   Updated: 2022/12/24 18:55:02 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1337
+# endif
 
 size_t	ft_strlen(char *str);
 char	*ft_strchr(char *s, int c);

@@ -6,11 +6,11 @@
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 20:19:36 by nettalha          #+#    #+#             */
-/*   Updated: 2022/10/26 20:19:40 by nettalha         ###   ########.fr       */
+/*   Updated: 2022/12/09 10:55:41 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(char *str)
 {

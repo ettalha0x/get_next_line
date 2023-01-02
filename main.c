@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nettalha <nettalha@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 19:42:04 by nettalha          #+#    #+#             */
-/*   Updated: 2022/12/24 18:54:28 by nettalha         ###   ########.fr       */
+/*   Created: 2023/01/02 10:51:44 by nettalha          #+#    #+#             */
+/*   Updated: 2023/01/02 11:02:34 by nettalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "get_next_line/get_next_line_bonus.h"
+#include <stdio.h>
+#include <fcntl.h>
 
-# include <stdlib.h>
-# include <unistd.h>
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1337
-# endif
+int	main(void)
+{
+	int	fd0;
+	int	fd1;
 
-size_t	ft_strlen(char *str);
-char	*ft_strchr(char *s, int c);
-char	*ft_strjoin(char *s1, char *s2);
-char	*get_next_line(int fd);
-char	*ft_get_line(char *container);
-char	*ft_clean(char *container);
-char	*ft_read(int fd, char *container);
-
-#endif
+	fd0 = open("../test0.txt", O_RDONLY);
+	fd1 = open("../test1.txt", O_RDONLY);
+	printf("%s", get_next_line(fd0));
+	printf("%s", get_next_line(fd1));
+	printf("%s", get_next_line(fd0));
+	printf("%s", get_next_line(fd1));
+}
